@@ -52,7 +52,7 @@ public class Main {
 
             // Checking is it unique
             for (int j = 0; j < i; j++) {
-                if (lottery[j] == lottery[i]) {
+                if (lottery[j].equals(lottery[i])) {
                     lottery[j] = (int) ((39*Math.random())+1);
                 }
             }
@@ -67,7 +67,7 @@ public class Main {
         int counter = 0;
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 7; j++) {
-                if (usersCombination[i] == lottery[j]) counter++;
+                if (usersCombination[i].equals(lottery[j])) counter++;
             }
         }
         if (counter == 7){
@@ -91,7 +91,7 @@ public class Main {
 
     private static boolean isUniqueInArray(int[] array, int a){
         for (int i = 0; i < array.length; i++) {
-            if (array[i] == a){
+            if (array[i].equals(a)){
                 return false;
             } else {
                 return true;
